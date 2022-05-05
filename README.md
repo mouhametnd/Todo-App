@@ -2,7 +2,7 @@
  
 ## Welcome 🍃
 
-This was a cool project to put into practice my `DOM` manipulation skills by doing `CRUD` (create, read, update and delete) on elements and also manipulating `indexedDB` and `localStorage`.
+This was a cool project to put into practice my `DOM` manipulation skills by doing `CRUD` (create, read, update and delete) on elements,  manipulating `indexedDB` and manipulating Drag & Drop API.
 
 ## Links
 - My Linkedin [Linkedin](https://www.linkedin.com/in/mouhametndiaye/)
@@ -42,3 +42,4 @@ Your users should be able to:
 - JavaScript modules
 - Manipulate IndexedDB and localStorage
 - Changing CSS custom properties with JS
+- Drag & Drop on elements
