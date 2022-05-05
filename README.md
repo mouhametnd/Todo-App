@@ -7,7 +7,7 @@ This was a cool project to put into practice my `DOM` manipulation skills by doi
 ## Links
 - My Linkedin [Linkedin](https://www.linkedin.com/in/mouhametndiaye/)
 - My email ahmetndiaye404@gmail.com
-- Live Project [Pomodoro App](https://mouhametnd-pomodoro.netlify.app/)
+- Live Project [Todo App](https://mouhametnd-todo.netlify.app/)
 - Challenged by [Frontend Mentor](https://www.frontendmentor.io/home)
 
 indexed Db **loc**
