@@ -28,7 +28,7 @@ Your users should be able to:
 
 
 ## Design of the App
-![Design preview for the Pomodoro App page coding challenge](./assets/design/design/desktop-preview.jpg)
+![Design preview for the Todo App page coding challenge](./assets/design/desktop-preview.jpg)
 
 ## Built with
 
