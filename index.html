@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/m.png">
+  <title>Frontend Mentor | Todo app</title>
+  <script src="https://kit.fontawesome.com/972c594dde.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="body body--light" data-theme="light">
+
+  <main class="main">
+    <div class="cont-top">
+      <h1 class="title">TODO</h1>
+      <i data-icon="dark" class=" hide cont-top__icon fa-solid fa-moon"></i>
+      <i data-icon="light" class="hide cont-top__icon fa-solid fa-sun"></i>
+    </div>
+
+    <div class="cont-input">
+      <button class="cont-input__addBtn"><i class="cont-input__icon fa-solid fa-plus"></i></button>
+      <input autofocus data-state="add" type="text" placeholder="Craete a new todo..." id="input"
+        class="cont-input__input">
+      <button class="cont-input__cancelBtn" id="cancel-update">
+        <i class="ul__li-btn-icon fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <ul class="ul">
+      <template id="li-template">
+        <li class="ul__li" draggable="true" data-task="1">
+          <button class="ul__li-div" data-id="complete-btn">
+            <i class="ul__checked-icon fa-solid fa-check"></i>
+          </button>
+          <p draggable="false" dropzone="false" class="ul__p"></p>
+
+          <div class="ul__li-cont-btns">
+            <button class="ul__li-btn" data-id="delete-btn">
+              <i class="ul__li-btn-icon fa-solid fa-xmark"></i>
+            </button>
+
+            <button class="ul__li-btn" data-id="update-btn">
+              <i class="ul__li-btn-icon fa-solid fa-pen"></i>
+            </button>
+          </div>
+        </li>
+      </template>
+
+
+
+      <li class="ul__li--last-child" draggable="false" dropzone="false" data-filterState="all">
+        <span dropzone="false" class="ul__li-span" id="taskNumber">0 items left</span>
+        <div class="ul__cont__filters cont__filters">
+          <span data-filter="all" class="ul__span-filter ul__span-filter--active">All</span>
+          <span data-filter="active" class="ul__span-filter">Active</span>
+          <span data-filter="completed" class="ul__span-filter">Completed</span>
+        </div>
+        <button class="ul__li--clear-completed ul__li-span" id="clear-completed">Clear Completed</button>
+      </li>
+    </ul>
+    <div class="cont__filters" id="cont-bottom-filters">
+      <span data-filter="all" class="ul__span-filter ul__span-filter--active">All</span>
+      <span data-filter="active" class="ul__span-filter">Active</span>
+      <span data-filter="completed" class="ul__span-filter">Completed</span>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">Drag and drop to reorder list</p>
+  </footer>
+
+  <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+@use './base/variables' as *;
+@use './base/reset' as *;
+
+.body {
+  // display: flex;
+  font-family: var(--primaryFont);
+  min-height: 100vh;
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+  padding: 0px 20px;
+  background-color: var(--bodyBg);
+  @media screen and (min-width: 748px) {
+    background-size: 100% 300px;
+  }
+
+  &--light {
+    background-image: url(../images/bg-desktop-light.jpg);
+  }
+
+  &--dark {
+    background-image: url(../images/bg-desktop-dark.jpg);
+  }
+}
+
+html .hide {
+  display: none;
+}
+
+html .show {
+  display: block;
+}
+
+.main {
+  width: min(100%, 600px);
+  margin-inline: auto;
+  margin: auto;
+  margin-top: 70px;
+  padding-block: 20px;
+}
+
+.cont-top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  letter-spacing: 10px;
+  font-weight: 7000;
+  font-size: clamp(19px, 3vw, 25px);
+  color: var(--white);
+  &__icon {
+    font-size: 30px;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    cursor: pointer;
+  }
+}
+
+.cont-input {
+  margin-top: 60px;
+  background-color: var(--todoBg);
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: row;
+  justify-content: start;
+  &__addBtn {
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    padding: 6px 7.5px 3.5px;
+    border-radius: 50%;
+    border: 1px solid var(--borderRoundClr);
+
+    &:hover {
+      border-color: var(--borderRoundHover);
+      border-color: var(--primarytextClr);
+    }
+  }
+
+  &__icon {
+    color: var(--secondaryTextClr);
+    pointer-events: none;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    font-size: clamp(15px, 3vw, 18px);
+    padding-left: 20px;
+    width: min(100%, 500px);
+    color: var(--primarytextClr);
+    outline: none;
+    &::placeholder {
+      font-size: 13px;
+    }
+  }
+
+  &__cancelBtn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    margin-left: auto;
+    color: var(--secondaryTextClr);
+    cursor: pointer;
+
+    &--show {
+      display: block;
+    }
+  }
+}
+
+.ul {
+  margin-top: 40px;
+  background-color: var(--todoBg);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__li {
+    padding: 20px;
+    border-bottom: 1px solid var(--borderBottom);
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    cursor: pointer;
+    @media screen and (min-width: 748px) {
+      display: flex;
+      flex-flow: row;
+      justify-content: left;
+    }
+
+    &--done {
+      opacity: 0.4;
+      & p {
+        color: var(--secondaryTextClr);
+        text-decoration: line-through;
+      }
+
+      .ul__li-div {
+        background-image: var(--gradient);
+
+        & i {
+          color: var(--iconClr); // with opacity
+        }
+      }
+    }
+
+    &--updating {
+      & .fa-pen {
+        color: var(--primarytextClr);
+      }
+    }
+
+    &--dragging {
+      opacity: 0.5;
+    }
+
+    &--dropping {
+      opacity: 0.1;
+      & * {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__li-cont-btns {
+    order: -1;
+    grid-column: span 2;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 12px;
+    margin: auto;
+
+    @media screen and (min-width: 748px) {
+      width: max-content;
+      height: max-content;
+      margin: 0;
+      margin-left: auto;
+
+      order: 1;
+      display: flex;
+    }
+  }
+
+  &__li-div {
+    height: max-content;
+    width: max-content;
+    padding: 6px 7px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    border: 1px solid var(--borderRoundClr);
+    cursor: pointer;
+  }
+
+  &__li-btn {
+    background-color: transparent;
+    outline: none;
+    color: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: max-content;
+    width: max-content;
+    color: var(--secondaryTextClr);
+
+    &-icon {
+      pointer-events: none;
+      font-size: 20px;
+      color: inherit;
+    }
+
+    @media screen and (hover: hover) {
+      &:hover {
+        color: var(--primarytextClr);
+      }
+    }
+  }
+
+  &__checked-icon {
+    pointer-events: none;
+    color: transparent;
+  }
+
+  &__p {
+    color: var(--primarytextClr);
+    height: max-content;
+    margin: 0;
+    margin-right: auto;
+    align-self: center;
+  }
+
+  &__li--last-child {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__cont__filters {
+    display: none;
+  }
+
+  &__li--last-child {
+    padding: 20px;
+  }
+
+  &__li-span {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--secondaryTextClr);
+    width: max-content;
+    height: max-content;
+    align-self: center;
+  }
+
+  &__li--clear-completed {
+    color: var(--secondaryTextClr);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    @media screen and (hover: hover) {
+      &:hover {
+        color: var(--primarytextClr);
+      }
+    }
+  }
+
+  .ul__cont__filters {
+    display: none;
+    @media screen and (min-width: 748px) {
+      display: flex;
+      padding: 0px;
+      margin: 0;
+    }
+  }
+
+  &__span-filter {
+    font-weight: 700;
+    color: var(--secondaryTextClr);
+    transition: color 0.1s linear;
+    cursor: pointer;
+    @media screen and (hover: hover) {
+      &:hover {
+        color: var(--primarytextClr);
+      }
+    }
+
+    &--active {
+      color: var(--brightBlue);
+      @media screen and (hover: hover) {
+        &:hover {
+          color: var(--brightBlue);
+        }
+      }
+    }
+  }
+}
+
+.cont__filters {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 17px;
+  border-radius: 7px;
+  margin-top: 25px;
+  background-color: var(--todoBg);
+  @media screen and (min-width: 748px) {
+    display: none;
+  }
+}
+
+.footer {
+  text-align: center;
+
+  &__text {
+    margin-top: 50px;
+    color: var(--secondaryTextClr);
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

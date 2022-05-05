@@ -1,0 +1,44 @@
+# Frontend Mentor - Todo app solution
+ 
+## Welcome 🍃
+
+This was a cool project to put into practice my `DOM` manipulation skills by doing `CRUD` (create, read, update and delete) on elements and also manipulating `indexedDB` and `localStorage`.
+
+## Links
+- My Linkedin [Linkedin](https://www.linkedin.com/in/mouhametndiaye/)
+- My email ahmetndiaye404@gmail.com
+- Live Project [Pomodoro App](https://mouhametnd-pomodoro.netlify.app/)
+- Challenged by [Frontend Mentor](https://www.frontendmentor.io/home)
+
+indexed Db **loc**
+## Challenge  
+
+Your users should be able to:
+- Add, delete, update And remove tasks
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+- Drag and drop to reorder items on the list
+- have the tasks back when the page is reloaded
+
+
+## Design of the App
+![Design preview for the Pomodoro App page coding challenge](./design/desktop-preview.jpg)
+
+## Built with
+
+- Mobile-first workflow
+- Semantic HTML5 markup
+- SASS
+- Vanilla JavaScript, IndexedDB and localStorage.
+  
+## What I learned
+
+- JavaScript modules
+- Manipulate IndexedDB and localStorage
+- Changing CSS custom properties with JS
