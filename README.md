@@ -24,7 +24,7 @@ Your users should be able to:
 - Clear all completed todos
 - Toggle light and dark mode
 - Drag and drop to reorder items on the list
-- have the tasks back when the page is reloaded
+- Get the tasks back when the page is reloaded
 
 
 ## Design of the App
