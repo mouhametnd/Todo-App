@@ -2,7 +2,7 @@
  
 ## Welcome 🍃
 
-This was a cool project to put into practice my `DOM` manipulation skills by doing `CRUD` (create, read, update and delete) on elements,  manipulating `indexedDB` and manipulating Drag & Drop API.
+This was a good project to put into practice my `DOM` manipulation skills by doing `CRUD` (create, read, update and delete) on elements,  manipulating `indexedDB` and manipulating Drag & Drop API.
 
 ## Links
 - My Linkedin [Linkedin](https://www.linkedin.com/in/mouhametndiaye/)
